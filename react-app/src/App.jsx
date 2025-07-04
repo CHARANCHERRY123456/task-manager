@@ -1,9 +1,7 @@
-import './App.css'
+import AppRoutes from "./routes/index.jsx";
 
 function App() {
-  return <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  return <AppRoutes />;
 }
 
 export default App
