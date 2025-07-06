@@ -2,6 +2,7 @@ import React , {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 
 import useAuth from "../context/useAuth.js";
+import LoginForm from "../components/auth/LoginForm.jsx";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Login = () => {
   }, [navigate , user]);
 
   return (
-      <h1>Login Page</h1>
+      <LoginForm />
   );
 }
 
