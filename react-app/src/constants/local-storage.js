@@ -1,4 +1,2 @@
-export default {
-  // Local Storage keys
-  AUTH_STORAGE_KEY: 'task-tracker-auth',
-}
+// src/constants/local-storage.js
+export const AUTH_STORAGE_KEY = 'task-tracker-auth';

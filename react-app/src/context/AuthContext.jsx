@@ -1,9 +1,7 @@
 // context/AuthContext.jsx
 
-// use local storage to persist user data
-// each user have only one field that is username
-
 import { createContext , useState, useEffect} from "react";
+import { authService } from "../service/auth-service.js";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -11,22 +9,21 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const storedUser = localStorage.getItem("user");
+        const storedUser = authService.getCurrentUser();
         if (storedUser) {
-        setUser(JSON.parse(storedUser));
+        setUser(storedUser);
         }
         setLoading(false);
     }, []);
 
     const login = (username) => {
-        const newUser = { username };
+        const newUser = authService.login(username);
         setUser(newUser);
-        localStorage.setItem("user", JSON.stringify(newUser));
     }
 
     const logout = () => {
+        authService.logout();
         setUser(null);
-        localStorage.removeItem("user");
     }
 
     return (
