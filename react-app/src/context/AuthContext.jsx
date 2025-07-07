@@ -19,6 +19,7 @@ export const AuthProvider = ({ children }) => {
     const login = (username) => {
         const newUser = authService.login(username);
         setUser(newUser);
+        return newUser; // Ensure the user object is returned
     }
 
     const logout = () => {
