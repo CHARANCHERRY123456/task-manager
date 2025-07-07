@@ -46,4 +46,4 @@ export const validateAuth = (authData) => {
     isValid: Object.keys(errors).length === 0,
     errors
   };
-};Gg
+};
