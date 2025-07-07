@@ -1,26 +1,18 @@
-import React , {useEffect} from "react";
-import { useNavigate } from "react-router-dom";
-
-import useAuth from "../context/useAuth.js";
-import LoginForm from "../components/auth/LoginForm.jsx";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { authService } from '../services/authService';
+import LoginForm from '../components/Auth/LoginForm';
 
 const Login = () => {
   const navigate = useNavigate();
-  const { user } = useAuth();
 
   useEffect(() => {
-    const isAuthenticated = user && user.username;
-
-    if (isAuthenticated) {
-      navigate("/");
-    } else {
-      navigate("/login");
+    if (authService.isAuthenticated()) {
+      navigate('/dashboard');
     }
-  }, [navigate , user]);
+  }, [navigate]);
 
-  return (
-      <LoginForm />
-  );
-}
+  return <LoginForm />;
+};
 
 export default Login;
