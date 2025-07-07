@@ -1,4 +1,4 @@
-# Personal Task Tracker
+# Personal Task Tracker 
 
 A beautiful, fully-featured personal task tracker built with React.js that helps you manage your daily tasks efficiently. This production-ready application offers a clean, modern interface with comprehensive task management capabilities.
 
