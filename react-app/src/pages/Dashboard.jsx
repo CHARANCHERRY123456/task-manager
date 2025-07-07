@@ -8,7 +8,7 @@ import TaskList from '../components/Task/TaskList';
 import TaskForm from '../components/Task/TaskForm';
 import TaskFilter from '../components/Task/TaskFilter';
 import TaskStats from '../components/Task/TaskStats';
-import ConfirmDialog from '../components/common/ConfirmDialog';
+import ConfirmDialog from '../components/common/ConfirmDialog.jsx';
 import Button from '../components/common/Button';
 import Input from '../components/common/Input';
 
